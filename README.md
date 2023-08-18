@@ -1,6 +1,6 @@
 # Decentraland Racing Game
 
-Provided to the community by NFTWorld[https://nftworld.io/]
+Provided to the community by [NFTWorld](https://nftworld.io/)
 
 ## Decentraland scene
 
