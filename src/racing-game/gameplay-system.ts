@@ -1,5 +1,5 @@
 /*
- * DCL Chess Game by NFTWorld.io
+ * DCL Racing Game by NFTWorld.io
  * Gameplay System
  * This is the main system that handles the multiplayer game logic
 */

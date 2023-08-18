@@ -1,5 +1,5 @@
 /*
- * DCL Chess Game by NFTWorld.io
+ * DCL Racing Game by NFTWorld.io
  * Game Entry Point
  * This file works in concert with gameplay-system to manage the scene and game state
 */
