@@ -131,12 +131,6 @@ if (config.game.enablePaidGames) {
         if (gameplaySystem.state !== 'Registration')
           return new OkPrompt('The game is still loading, please try again in a moment')
 
-        // TODO: Pull this from somewhere
-        const metadata = {
-          environment: 'ufo',
-          vehicle: 'zeta'
-        }
-
         new OkPrompt(`The next signature request is to pay the ${config.fees.entryFee} Polygon MANA entry fee`, () => {
           void (async () => {
             try {
@@ -147,7 +141,7 @@ if (config.game.enablePaidGames) {
               txText.value = 'Transaction pending...'
               txText.fontAutoSize = true
 
-              const tx: any = await gameplaySystem.feeProvider.registerUser(user.publicKey!, metadata)
+              const tx: any = await gameplaySystem.feeProvider.registerUser(user.publicKey!)
               txText.visible = false
 
               log('game:tx', tx)
