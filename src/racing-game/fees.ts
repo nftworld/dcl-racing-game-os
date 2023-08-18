@@ -46,16 +46,16 @@ export class FeeProvider {
     }
   }
 
-  async registerUser (address: string, metadata?: any, fee: number = config.fees.entryFee) {
+  async registerUser(address: string) {
     if (!this.mana) throw new Error('FeeProvider not initialized')
     try {
       if (!config.fees.skip) {
         const wei = await this.getBalance(address)
         const balance = ethConnect.fromWei(wei, 'ether')
-        if (parseFloat(balance) < fee) return { error: 'Insufficient Polygon MANA' }
+        if (parseFloat(balance) < config.fees.entryFee) return { error: 'Insufficient Polygon MANA' }
       }
 
-      const tx: any = await this.requestFee(fee)
+      const tx: any = await this.requestFee(config.fees.entryFee)
       if (!tx?.txId && !config.fees.skip) throw new Error('Transaction failed')
       return tx
     } catch (err: any) {
