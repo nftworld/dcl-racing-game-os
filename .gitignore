@@ -1,0 +1,7 @@
+node_modules/
+bin/
+.idea
+package-lock.json
+.DS_Store
+*-debug.log
+.emulator/

@@ -1,0 +1,10 @@
+{
+  "extends": "@dcl/eslint-config/sdk",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "project": ["tsconfig.json"]
+  },
+  "rules": {
+    "prettier/prettier": "off"
+  }
+}

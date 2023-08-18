@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "outFile": "./bin/game.js",
+    "allowJs": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "paths": {
+      "@dcl/ecs-scene-utils": [
+        "node_modules/.pnpm/@dcl+ecs-scene-utils@1.7.5_decentraland-ecs@6.11.10/node_modules/@dcl/ecs-scene-utils/dist/index.d.ts",
+        "node_modules/@dcl/ecs-scene-utils/dist/index.d.ts",
+        "node_modules\\@dcl\\ecs-scene-utils\\dist\\index.d.ts",
+        "node_modules/.pnpm/@dcl+ecs-scene-utils@1.7.5_decentraland-ecs@6.11.11/node_modules/@dcl/ecs-scene-utils/dist/index.d.ts",
+        "node_modules/.pnpm/@dcl+ecs-scene-utils@1.7.5_decentraland-ecs@6.11.14/node_modules/@dcl/ecs-scene-utils/dist/index.d.ts"
+      ],
+      "decentraland-transactions": [
+        "node_modules/.pnpm/decentraland-transactions@1.40.0/node_modules/decentraland-transactions/decentraland-transactions.d.ts",
+        "node_modules/decentraland-transactions/decentraland-transactions.d.ts",
+        "node_modules\\decentraland-transactions\\decentraland-transactions.d.ts"
+      ],
+      "eth-connect": [
+        "node_modules/.pnpm/eth-connect@6.0.3/node_modules/eth-connect/eth-connect.d.ts",
+        "node_modules/eth-connect/eth-connect.d.ts",
+        "node_modules\\eth-connect\\eth-connect.d.ts"
+      ],
+      "@dcl/crypto-scene-utils": [
+        "node_modules/.pnpm/@dcl+crypto-scene-utils@1.1.1/node_modules/@dcl/crypto-scene-utils/dist/index.d.ts",
+        "node_modules/@dcl/crypto-scene-utils/dist/index.d.ts",
+        "node_modules\\@dcl\\crypto-scene-utils\\dist\\index.d.ts"
+      ],
+      "@dcl/ui-scene-utils": [
+        "node_modules/.pnpm/@dcl+ui-scene-utils@1.8.4/node_modules/@dcl/ui-scene-utils/dist/index.d.ts",
+        "node_modules/@dcl/ui-scene-utils/dist/index.d.ts",
+        "node_modules\\@dcl\\ui-scene-utils\\dist\\index.d.ts"
+      ],
+      "@dcl/l2-scene-utils": [
+        "node_modules/.pnpm/github.com+mathiscode+decentraland-l2-utils@c72c9d5ac4d08faad096d9a0c83ad8a81438f1ba/node_modules/@dcl/l2-scene-utils/dist/index.d.ts",
+        "node_modules/@dcl/l2-scene-utils/dist/index.d.ts",
+        "node_modules\\@dcl\\l2-scene-utils\\dist\\index.d.ts",
+        "node_modules/.pnpm/github.com+mathiscode+decentraland-l2-utils@63fb3f6f655fc9833555a1c782dbfcfd27c8b243/node_modules/@dcl/l2-scene-utils/dist/index.d.ts",
+        "node_modules/.pnpm/github.com+mathiscode+decentraland-l2-utils@cb7601a89e1b324c05a30cb96ca9a6c84069ca6d/node_modules/@dcl/l2-scene-utils/dist/index.d.ts",
+        "node_modules/.pnpm/github.com+mathiscode+decentraland-l2-utils@8464d9c6b08c74e339dd51b58c88a6ceba7e4136/node_modules/@dcl/l2-scene-utils/dist/index.d.ts",
+        "node_modules/.pnpm/github.com+mathiscode+decentraland-l2-utils@3be2fce8138b6977ec86e5e4eb6b998f862f7961/node_modules/@dcl/l2-scene-utils/dist/index.d.ts"
+      ]
+    },
+    "baseUrl": "."
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "extends": "./node_modules/decentraland-ecs/types/tsconfig.json",
+  "compileOnSave": false
+}
