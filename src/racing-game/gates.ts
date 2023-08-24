@@ -5,13 +5,17 @@ const doNotEnterOrigW = 162
 const doNotEnterOrigH = 162
 const doNotEnterWidthRatio = doNotEnterOrigW / doNotEnterOrigH
 
-const startGateScale = 2.6
-// const startGateScale = 0
+// const startGateScale = 2.6
+const startGateScale = 0
 export const startGate = new Entity()
-if (!config.game.disableStartGate) startGate.setParent(scene) 
+if (!config.game.disableStartGate) {
+  // startGate.setParent(scene)
+} 
 const startGateShape = new PlaneShape()
-startGateShape.withCollisions = true
+
+startGateShape.withCollisions = false
 startGateShape.visible = false //racers dont like it in their face. Perhaps replace it with waving flags or something
+
 startGate.addComponent(startGateShape)
 const startGateTexture = new Texture('images/racing-game/donotenter.png')
 const startGateMaterial = new Material()

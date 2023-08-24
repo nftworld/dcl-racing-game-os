@@ -155,7 +155,7 @@ export class GameplaySystem implements ISystem {
     this.debugInfo = new CornerLabel(`${this.direction}:${this.position.floor}:${this.position.track}`)
     if (!config.game.showTrackIDs) this.debugInfo.hide()
 
-    this.raceIdLabel = new CornerLabel('', -10, 50, undefined, 10)
+    this.raceIdLabel = new CornerLabel('', -5, 50, undefined, 10)
 
     boardParent.addComponentOrReplace(
       new utils.Interval(config.backend.leaderboardUpdateInterval, () => {
@@ -221,7 +221,7 @@ export class GameplaySystem implements ISystem {
     this.timer.hAlign = 'right'
     this.timer.width = 120
     this.timer.height = 30
-    this.timer.positionX = -70
+    this.timer.positionX = -10
     this.timer.color = Color4.White()
     this.timer.visible = false
 
@@ -573,14 +573,14 @@ export class GameplaySystem implements ISystem {
         const elapsed = new Date(elapsedTime)
         const elapsedMinutes = padZero(elapsed.getMinutes())
         const elapsedSeconds = padZero(elapsed.getSeconds())
-        const elapsedMilliseconds = padZero(elapsed.getMilliseconds())
+        // const elapsedMilliseconds = padZero(elapsed.getMilliseconds())
 
         const max = new Date(config.game.timeLimit)
         const maxMinutes = padZero(max.getMinutes())
         const maxSeconds = padZero(max.getSeconds())
-        const maxMilliseconds = padZero(max.getMilliseconds(), 100, '00')
+        // const maxMilliseconds = padZero(max.getMilliseconds(), 100, '00')
 
-        this.timer.value = `${elapsedMinutes}:${elapsedSeconds}:${elapsedMilliseconds} / ${maxMinutes}:${maxSeconds}:${maxMilliseconds}`
+        this.timer.value = `${elapsedMinutes}:${elapsedSeconds} / ${maxMinutes}:${maxSeconds}`
         this.timer.visible = true
       }
 

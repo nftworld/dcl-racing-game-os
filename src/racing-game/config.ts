@@ -11,7 +11,7 @@ export default {
     enablePaidGames: false, // Set to true to enable paid games
     playerLimit: 4, // Maximum players per game
     timeLimit: 60000 * 3, // Must match backend GAME_TIME_LIMIT
-    disableStartGate: false, // Used for dev to skip the start gate
+    disableStartGate: true, // Set to true to disable the start gate
     showTrackIDs: false, // Used for dev to show track IDs
     teleportUp: false, // Used for dev to quickly get to the last track section on the way up
     teleportDown: false, // Used for dev to quickly get back to the first track section on the way down

@@ -65,11 +65,24 @@ const resetGatesAndColliders = () => {
   }
 }
 
+const addDirectionColliders = () => {
+  for (const ent of directionCollidersGroup.entities) {
+    ent.getComponent(Shape).withCollisions = true
+  }
+}
+
+const removeDirectionColliders = () => {
+  for (const ent of directionCollidersGroup.entities) {
+    ent.getComponent(Shape).withCollisions = false
+  }
+}
+
 const setup = () => {
   stage = 1
   stage1 = true
 
   gameplaySystem.events.once('racing:game:starting', () => {
+    addDirectionColliders()
     stage = 2
     stage2 = true
     engine.addSystem(new countDown())
@@ -86,6 +99,7 @@ const setup = () => {
 
   gameplaySystem.events.once('racing:game:finished', () => {
     resetGatesAndColliders()
+    removeDirectionColliders()
     if (stage !== 3) return
     stage = 4
     // gameplaySystem.killTimer()
