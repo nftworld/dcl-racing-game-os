@@ -57,6 +57,9 @@ const defaultMetadata = {
   }
 }
 
+let colliders: IEntity[] = []
+const directionCollidersGroup = engine.getComponentGroup(DirectionColliderFlag)
+
 const resetGatesAndColliders = () => {
   startGate.getComponent(Transform).position.z = 7.05
   loopGate.getComponent(Transform).position.set(9.95, 12.35, 29.4)
@@ -66,14 +69,14 @@ const resetGatesAndColliders = () => {
 }
 
 const addDirectionColliders = () => {
-  for (const ent of directionCollidersGroup.entities) {
-    ent.getComponent(Shape).withCollisions = true
-  }
+  for (const ent of colliders) engine.addEntity(ent)
 }
 
 const removeDirectionColliders = () => {
-  for (const ent of directionCollidersGroup.entities) {
-    ent.getComponent(Shape).withCollisions = false
+  colliders = []
+  while (directionCollidersGroup.entities.length) {
+    colliders.push(directionCollidersGroup.entities[0])
+    engine.removeEntity(directionCollidersGroup.entities[0])
   }
 }
 
@@ -196,7 +199,6 @@ if (config.game.enablePaidGames) {
   )
 }
 
-const directionCollidersGroup = engine.getComponentGroup(DirectionColliderFlag)
 let direction = "up"
 let hasFinished = false
 
